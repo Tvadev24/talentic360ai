@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Cpu, Sparkles, CheckCircle2, Sliders, TrendingUp } from "lucide-react";
+import { ArrowRight, Cpu, Sparkles, CheckCircle2 } from "lucide-react";
 import SectionHead from "@/components/section-head";
-import { Reveal } from "@/components/motion";
 
 const SPECIALIZATIONS = [
   {

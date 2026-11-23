@@ -6,7 +6,6 @@ import { photo, isPhotoKey } from "@/lib/images";
 
 export function PageHero({
   eyebrow,
-  index,
   title,
   accent,
   intro,

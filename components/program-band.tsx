@@ -9,11 +9,10 @@ import type { Program } from "@/lib/content";
 
 export function ProgramBand({
   program,
-  index,
   flip = false,
 }: {
   program: Program;
-  index: number;
+  index?: number;
   flip?: boolean;
 }) {
   const src = isPhotoKey(program.image) ? photo(program.image, { w: 900, h: 1200 }) : program.image;

@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { Cpu, Eye, Activity, Sparkles, RefreshCw, Layers } from "lucide-react";
+import { motion } from "framer-motion";
+import { Cpu, Eye, Activity, Layers } from "lucide-react";
 import { photo } from "@/lib/images";
 
 interface Node {

@@ -127,13 +127,15 @@ export function Icon({
   name,
   className,
   strokeWidth = 1.5,
+  style,
 }: {
   name: string;
   className?: string;
   strokeWidth?: number;
+  style?: React.CSSProperties;
 }) {
   const Cmp = registry[name as IconName] ?? Target;
-  return <Cmp className={className} strokeWidth={strokeWidth} aria-hidden="true" />;
+  return <Cmp className={className} strokeWidth={strokeWidth} style={style} aria-hidden="true" />;
 }
 
 export default Icon;

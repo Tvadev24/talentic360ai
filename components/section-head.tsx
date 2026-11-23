@@ -1,7 +1,6 @@
 import { Reveal } from "@/components/motion";
 
 export function SectionHead({
-  index,
   eyebrow,
   title,
   accent,
@@ -24,7 +23,6 @@ export function SectionHead({
   const inkColor = tone === "invert" ? "#ffffff" : "var(--ink)";
   const softColor = tone === "invert" ? "rgba(255,255,255,0.6)" : "var(--ink-soft)";
   const mutedColor = tone === "invert" ? "rgba(255,255,255,0.4)" : "var(--ink-muted)";
-  const lineColor = tone === "invert" ? "rgba(255,255,255,0.22)" : "var(--line)";
 
   return (
     <div

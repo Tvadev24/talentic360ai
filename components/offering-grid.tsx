@@ -5,7 +5,6 @@ import type { Offering } from "@/lib/content";
 export function OfferingGrid({
   items,
   columns = 4,
-  startIndex = 1,
   tone = "default",
 }: {
   items: Offering[];
@@ -22,7 +21,7 @@ export function OfferingGrid({
 
   return (
     <Stagger className={`grid border-l border-t ${cols}`}>
-      {items.map((item, i) => (
+      {items.map((item) => (
         <StaggerItem key={item.title}>
           <article
             className="group relative flex h-full flex-col border-b border-r p-5 transition-colors duration-500 md:p-6"
