@@ -27,6 +27,16 @@ export function HomeHero() {
         <div className="relative grid gap-8 pt-6 pb-8 md:pt-8 md:pb-10 lg:grid-cols-12 lg:gap-10 lg:pt-10 lg:pb-12">
           {/* Copy --------------------------------------------------- */}
           <div className="lg:col-span-7">
+            <Reveal y={12} delay={0.05}>
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1 text-[11px] font-mono uppercase tracking-wider text-emerald-900 dark:text-emerald-300">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-600 dark:bg-emerald-400" />
+                </span>
+                AI-Enabled Apprenticeship Ecosystem · 2026 Cohort
+              </div>
+            </Reveal>
+
             <h1
               className="display mt-0 text-[clamp(1.85rem,3.8vw,2.95rem)] leading-[1.14]"
               style={{ color: "var(--ink)" }}

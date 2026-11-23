@@ -5,6 +5,7 @@ import AiEngineSection from "@/components/ai-engine-section";
 import ProgramBand from "@/components/program-band";
 import SectionHead from "@/components/section-head";
 import StatsBand from "@/components/stats-band";
+import ParallaxShowcaseSection from "@/components/parallax-showcase-section";
 import WhyUsSection from "@/components/why-us-section";
 import ContactSection from "@/components/contact-section";
 import { programs } from "@/lib/content";
@@ -40,6 +41,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <ParallaxShowcaseSection />
 
       <StatsBand />
 
