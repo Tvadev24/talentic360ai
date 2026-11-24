@@ -9,6 +9,7 @@ import { ArrowRight, ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
 import { navigation, site } from "@/lib/content";
 import BrandLockup from "@/components/brand-lockup";
 import ThemeToggle from "@/components/theme-toggle";
+import LanguageSelector from "@/components/language-selector";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -89,7 +90,7 @@ export function SiteHeader() {
         <div className="shell flex items-center justify-between gap-6 py-2.5 md:py-3">
           <BrandLockup size="md" />
 
-          <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+          <nav className="hidden items-center gap-0.5 xl:gap-1 lg:flex" aria-label="Primary">
             {navigation.map((item) => {
               const active = isActive(item.href);
 
@@ -98,14 +99,14 @@ export function SiteHeader() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="relative px-3.5 py-2 text-[13.5px] font-medium transition-colors"
+                    className="relative px-2.5 py-1.5 xl:px-3 text-[13px] xl:text-[13.5px] font-medium transition-colors"
                     style={{ color: active ? "var(--brand)" : "var(--ink-soft)" }}
                   >
                     {item.label}
                     {active && (
                       <motion.span
                         layoutId="nav-active"
-                        className="absolute inset-x-3.5 bottom-0 h-px"
+                        className="absolute inset-x-2.5 bottom-0 h-px"
                         style={{ background: "var(--brand)" }}
                         transition={{ duration: 0.4, ease: EASE }}
                       />
@@ -125,7 +126,7 @@ export function SiteHeader() {
                 >
                   <Link
                     href={item.href}
-                    className="relative flex items-center gap-1.5 px-3.5 py-2 text-[13.5px] font-medium transition-colors"
+                    className="relative flex items-center gap-1 px-2.5 py-1.5 xl:px-3 text-[13px] xl:text-[13.5px] font-medium transition-colors"
                     style={{ color: active ? "var(--brand)" : "var(--ink-soft)" }}
                     aria-expanded={open}
                   >
@@ -137,7 +138,7 @@ export function SiteHeader() {
                     {active && (
                       <motion.span
                         layoutId="nav-active"
-                        className="absolute inset-x-3.5 bottom-0 h-px"
+                        className="absolute inset-x-2.5 bottom-0 h-px"
                         style={{ background: "var(--brand)" }}
                         transition={{ duration: 0.4, ease: EASE }}
                       />
@@ -189,7 +190,8 @@ export function SiteHeader() {
             })}
           </nav>
 
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            <LanguageSelector />
             <ThemeToggle />
             <Link href="/contact" className="btn btn-primary btn-sm hidden sm:inline-flex">
               Get Started

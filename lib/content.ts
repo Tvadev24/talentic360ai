@@ -35,30 +35,15 @@ export type NavItem = {
 export const navigation: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
+  { label: "Academic", href: "/academic" },
+  { label: "Vocational", href: "/vocational" },
+  { label: "Corporate", href: "/corporate" },
+  { label: "Government", href: "/government" },
+  { label: "Contact", href: "/contact" },
   {
-    label: "Programs",
+    label: "More",
     href: "/programs",
     children: [
-      {
-        label: "Academic",
-        href: "/programs/academic",
-        blurb: "University partnerships, apprenticeships and certifications.",
-      },
-      {
-        label: "Vocational",
-        href: "/programs/vocational",
-        blurb: "Trade skills, fast-track certification and on-the-job training.",
-      },
-      {
-        label: "Corporate",
-        href: "/programs/corporate",
-        blurb: "Enterprise L&D, leadership and performance programs.",
-      },
-      {
-        label: "Government",
-        href: "/programs/government",
-        blurb: "Public sector capability and Skill India initiatives.",
-      },
       {
         label: "Post-Graduate",
         href: "/programs/post-graduate",
@@ -74,10 +59,13 @@ export const navigation: NavItem[] = [
         href: "/programs/remote",
         blurb: "Online, self-paced and hybrid learning without boundaries.",
       },
+      {
+        label: "Why Choose Us",
+        href: "/why-us",
+        blurb: "Six reasons premier partners choose TALENTIC 360.AI.",
+      },
     ],
   },
-  { label: "Why Us", href: "/why-us" },
-  { label: "Contact", href: "/contact" },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -588,14 +576,15 @@ export const footer = {
   quickLinks: [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Programs", href: "/programs" },
+    { label: "Why Us", href: "/why-us" },
     { label: "Contact", href: "/contact" },
   ],
   programLinks: [
-    { label: "Academic Programs", href: "/programs/academic" },
-    { label: "Vocational Programs", href: "/programs/vocational" },
-    { label: "Corporate Programs", href: "/programs/corporate" },
-    { label: "Remote Programs", href: "/programs/remote" },
+    { label: "Academic", href: "/academic" },
+    { label: "Vocational", href: "/vocational" },
+    { label: "Corporate", href: "/corporate" },
+    { label: "Government", href: "/government" },
+    { label: "All Programs", href: "/programs" },
   ],
   socials: [
     { icon: "Facebook", href: "#", label: "Facebook" },

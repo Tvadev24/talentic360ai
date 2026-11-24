@@ -107,7 +107,14 @@ export function ProgramBand({
           </Reveal>
 
           <Reveal delay={0.18}>
-            <Link href={`/programs/${program.slug}`} className="link-rule mt-6">
+            <Link
+              href={
+                ["academic", "vocational", "corporate", "government"].includes(program.slug)
+                  ? `/${program.slug}`
+                  : `/programs/${program.slug}`
+              }
+              className="link-rule mt-6"
+            >
               {program.cta}
               <ArrowRight className="h-3.5 w-3.5" strokeWidth={2} />
             </Link>

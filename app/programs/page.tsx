@@ -50,7 +50,14 @@ export default function ProgramsPage() {
             return (
               <Reveal key={program.slug} delay={(i % 2) * 0.08}>
                 <article className="group flex h-full flex-col">
-                  <Link href={`/programs/${program.slug}`} className="flex h-full flex-col">
+                  <Link
+                    href={
+                      ["academic", "vocational", "corporate", "government"].includes(program.slug)
+                        ? `/${program.slug}`
+                        : `/programs/${program.slug}`
+                    }
+                    className="flex h-full flex-col"
+                  >
                     <Uncover>
                       <div className="relative aspect-[7/5] w-full overflow-hidden">
                         <Image
